@@ -1,0 +1,405 @@
+/* --- Global & Layout Variables --- */
+:root {
+    --darker: #1a1a1a;
+    --text-color: #ffffff;
+    --bg-color: rgb(12, 10, 12);
+    --sidebar-width: 80px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden; /* Prevents side-scrolling */
+}
+
+/* Make sure all images are responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Main Layout Architecture --- */
+.sidebar {
+    position: fixed;
+    top: 50%; /* Moves it down */
+    right: 30px; /* Gives it breathing room from the edge */
+    transform: translateY(-50%); /* Centers it perfectly vertically */
+    padding: 40px 20px;
+    border-radius: 30px; /* Creates the sleek pill shape */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Spaces out the links nicely */
+    
+    /* Frosted Glass Effect */
+    background: rgba(30, 30, 30, 0.4); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    z-index: 1000;
+    transition: all 0.4s ease;
+}
+
+/* Sidebar container glows slightly when the mouse enters the area */
+.sidebar:hover {
+    background: rgba(40, 40, 40, 0.6);
+    border-color: rgba(0, 247, 255, 0.3); /* Matches your card shadow */
+    box-shadow: 0 8px 32px 0 rgba(0, 247, 255, 0.15);
+}
+
+.main-content {
+    
+    padding: 20px 0;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Flexbox Utilities --- */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+.align-center {
+    align-items: center;
+}
+.justify-center {
+    justify-content: center;
+}
+.d-flex {
+    display: flex;
+}
+.mt-auto {
+    margin-top: auto !important; /* Pushes buttons to the bottom of cards */
+}
+
+/* --- Spacing --- */
+.section-spacing {
+    margin-top: 80px;
+}
+.section-heading {
+    margin-top: 130px;
+    font-weight: bold;
+    font-size: 4em;
+    color: #8d8d8d;
+    text-align: center;
+}
+
+/* --- Header Section --- */
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.brand-name {
+    font-size: 2.5em;
+}
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.social-icons img {
+    width: 40px;
+}
+.social-icons img[alt="LinkedIn"] {
+    width: 67px;
+}
+
+/* --- Intro Profile --- */
+.tagline {
+    font-size: 1.9rem;
+    font-style: italic;
+    font-family: Georgia, serif;
+    margin-bottom: 30px;
+}
+.circular-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Ensures image fills circle without stretching */
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+.greetings {
+    font-size: 1.7em;
+    margin-top: 20px;
+}
+.highlight-text {
+    font-size: 2em;
+    color: #ffffff;
+}
+.sub-text {
+    font-size: 2em;
+    color: grey;
+}
+
+/* --- Cards --- */
+.card {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: var(--darker);
+    box-shadow: 0 4px 8px rgba(0, 247, 255, 0.2);
+    width: 100%;
+}
+.full-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%; /* Ensures cards in the same row match heights */
+}
+.card-title {
+    font-size: 2.5em;
+    color: gray;
+    margin-bottom: 20px;
+}
+.card-subtitle {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.card-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 25px;
+}
+.about-card {
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: justify;
+}
+.about-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10%;
+}
+
+/* --- Education Highlight Box --- */
+.highlight-box {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    width: 100%;
+}
+.cgpa-text {
+    font-size: 1.3em;
+    color: #2c5530;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.dean-text {
+    font-size: 1.1em;
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* --- Projects --- */
+.project-card h3 {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+}
+/* This is the magic for your project images */
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Crops nicely if dimensions change */
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+.project-desc {
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+.project-link {
+    color: #858282;
+}
+
+/* --- Tech Tags --- */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+.tag {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+.tag-purple { background: rgb(128, 72, 169); }
+.tag-green { background: rgb(91, 180, 91); }
+.tag-red { background: rgb(220, 53, 69); }
+
+/* --- Skills Progress Bars --- */
+.skill-row {
+    width: 100%;
+    margin: 15px 0;
+}
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+.text-experienced { color: rgb(128, 72, 169); }
+.text-intermediate { color: rgb(91, 180, 91); }
+.text-basic { color: rgb(220, 53, 69); }
+
+.progress-bg {
+    background: #e0e0e0;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+}
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+.progress-fill.experienced { background: rgb(128, 72, 169); }
+.progress-fill.intermediate { background: rgb(91, 180, 91); }
+.progress-fill.basic { background: rgb(220, 53, 69); }
+
+/* --- Buttons --- */
+.button-custom {
+    border: 1px solid white; 
+    border-radius: 10px; 
+    padding: 10px 20px;
+    background-color: var(--darker); 
+    color: white; 
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+}
+.button-custom:hover {
+    background-color: white; 
+    color: black; 
+    border: 1px solid white;
+}
+
+/* --- Contact & Footer --- */
+.contact-box {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px 30px;
+    background-color: var(--darker);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+.contact-box img {
+    width: 60px;
+}
+.footer-text {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: gray;
+}
+
+
+.sidebar a {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Text glow and slight pop-out on hover */
+.sidebar a:hover, .sidebar a:active {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Animated neon underline effect */
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00f7ff;
+    transition: width 0.3s ease;
+}
+
+.sidebar a:hover::after {
+    width: 100%;
+}
+
+.inner-card {
+    background-color: #252525; /* Slightly lighter than the main card background */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px; /* Space between the stacked cards */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Removes the margin from the very last nested card so it doesn't create extra empty space at the bottom */
+.inner-card:last-child {
+    margin-bottom: 0;
+}
+
+.card-subtitle-small {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.inner-hr {
+    border-color: #444;
+    margin: 12px 0;
+}
+
+/* Smaller text style specifically for the job details/responsibilities */
+.inner-details {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: justify; /* Makes paragraph text look cleaner */
+}
+
+/* Forces buttons inside nested cards to stretch full width */
+.w-100 {
+    width: 100%;
+}
+
+/* --- Scroll Reveal Animation --- */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px); /* Pushes the card down slightly before it appears */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Optimizes browser performance */
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

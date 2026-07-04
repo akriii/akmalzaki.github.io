@@ -1,395 +1,172 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Akmal Zaki - Portfolio</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Akmal Zaki — Backend Developer & CS Undergraduate</title>
+    <meta name="description" content="Portfolio of Akmal Zaki — Computer Science undergraduate at UTP. Backend-focused builder working with FastAPI, Spring Boot, PHP and React.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <div><a href="#home">Home</a></div>
-        <div><a href="#about">About</a></div>
-        <div><a href="#achievement">Achievement</a></div>
-        <div><a href="#skills">Skills</a></div>
-        <div><a href="#project">Project</a></div>
-        <div><a href="#contact">Contact</a></div>
-    </div>
 
-    <div class="main-content">
-        <div class="container-fluid content-container">
-            
-            <div class="row header-row">
-                <div id="home" class="col-sm-6 brand-name">
-                    Akmal Zaki
+    <nav class="nav">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">AZ</span>
+                <span class="brand-name">Akmal Zaki<span>.dev</span></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="skills.html">Skills</a>
+                <a href="resume.html">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero container">
+        <div class="hero-grid">
+            <div class="reveal">
+                <span class="badge"><span class="dot"></span> Computer Science · UTP · Available for opportunities</span>
+                <h1>Akmal <span class="grad-text">Zaki</span></h1>
+                <p class="hero-role">Systems thinker &middot; <b>Backend builder</b> &middot; Always shipping</p>
+                <p class="lead">
+                    Computer Science undergraduate at Universiti Teknologi PETRONAS — transferred in with a
+                    3.78 diploma CGPA, the Vice Chancellor's Award and five-time Dean's List recognition.
+                    I build backend REST APIs with FastAPI and Spring Boot, maintain a finance portal that
+                    cut manual verification by 60%, and I'm sharpening my cybersecurity and database skills.
+                </p>
+                <div class="chips">
+                    <span class="chip">Python</span>
+                    <span class="chip">FastAPI</span>
+                    <span class="chip">Spring Boot</span>
+                    <span class="chip">PostgreSQL</span>
+                    <span class="chip">React</span>
+                    <span class="chip">PHP</span>
                 </div>
-                <div class="col-sm-6 social-icons">
-                    <a href="https://github.com/akriii">
-                        <img src="images/github(2).png" alt="GitHub">
-                    </a>
-                    <a href="https://www.linkedin.com/in/akmal-zaki-331a36275/">
-                        <img src="images/linkedin.png" alt="LinkedIn">
-                    </a>   
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">View Projects <span class="arrow">&rarr;</span></a>
+                    <a href="resume.html" class="btn btn-ghost">View Resume</a>
                 </div>
             </div>
 
-            <div class="row section-spacing text-center">
-                <div class="col-sm-12 tagline">
-                   Systems thinker. Backend builder. Always shipping.
-                </div>
-                <div class="col-sm-12 profile-wrapper">
-                    <img src="images/gambar_casual_dean_list.jpg" class="circular-image">
+            <div class="hero-photo-wrap reveal d1">
+                <img src="images/gambar_casual_dean_list.jpg" class="hero-photo" alt="Portrait of Akmal Zaki">
+                <div class="hero-photo-tag">
+                    <span>&gt; based in Malaysia</span>
+                    <span class="grad-text">@akriii</span>
                 </div>
             </div>
+        </div>
 
-            <div class="row section-spacing text-center">
-                <div class="col-sm-12">
-                    <!--<div class="greetings">Greetings! I Am</div>-->
-                    <div class="greetings-name">
-                        <strong class="highlight-text">Akmal Zaki</strong> <br>
-                        <strong class="sub-text">Full-Stack Developer · FastAPI · React · PostgreSQL</strong><br>
-                        <a href="files/Muhammad_Akmal_Fikri_Bin_Asma_Zaki-Resume.pdf">
-                            <button class="btn button-custom">View Resume</button>
-                        </a>
+        <!-- Stats -->
+        <div class="stats reveal d1">
+            <div class="stat"><div class="num grad-text">3.78</div><div class="lbl">Diploma CGPA / 4.00</div></div>
+            <div class="stat"><div class="num grad-text">5&times;</div><div class="lbl">Dean's List</div></div>
+            <div class="stat"><div class="num grad-text">100+</div><div class="lbl">Students served by builds</div></div>
+            <div class="stat"><div class="num grad-text">VC</div><div class="lbl">Vice Chancellor's Award</div></div>
+        </div>
+    </header>
+
+    <!-- WHAT I DO -->
+    <section class="section container">
+        <div class="section-head reveal">
+            <span class="kicker">What I do</span>
+            <h2 class="section-title">Building things that <span class="grad-text">run in production</span></h2>
+            <p class="section-sub">I care about clean systems, real users, and shipping. Here's where I spend my time.</p>
+        </div>
+        <div class="grid grid-3">
+            <div class="card reveal">
+                <div class="card-icon-badge">&#9881;</div>
+                <h3>Backend Engineering</h3>
+                <p class="muted">Designing REST APIs, data models and integrations with FastAPI, Spring Boot and PHP — powering university systems and hackathon builds.</p>
+            </div>
+            <div class="card reveal d1">
+                <div class="card-icon-badge">&#9671;</div>
+                <h3>Full-Stack Web</h3>
+                <p class="muted">Turning backends into products with React and clean, responsive interfaces backed by PostgreSQL, Supabase and MySQL.</p>
+            </div>
+            <div class="card reveal d2">
+                <div class="card-icon-badge">&#128274;</div>
+                <h3>Cybersecurity</h3>
+                <p class="muted">Currently levelling up my security fundamentals — secure design, common vulnerabilities and hands-on practice.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="section container">
+        <div class="section-head reveal">
+            <span class="kicker">Selected work</span>
+            <h2 class="section-title">Featured <span class="grad-text">projects</span></h2>
+            <p class="section-sub">A few things I've built end to end. See the full list on the projects page.</p>
+        </div>
+        <div class="grid grid-2">
+            <article class="card project-card reveal">
+                <div class="project-thumb"><img src="images/study_plan.png" alt="CEE Study Plan"></div>
+                <div class="project-body">
+                    <div class="tags">
+                        <span class="tag a">React</span><span class="tag a">FastAPI</span><span class="tag b">Supabase</span>
+                    </div>
+                    <h3>CEE Study Plan</h3>
+                    <p class="desc">A full-stack academic planning tool used by 100+ CEE students to track course completion and GPA in real time, with HuggingFace-powered AI feedback.</p>
+                    <div class="project-links">
+                        <a href="https://study-plan-react.vercel.app/" class="btn btn-ghost" target="_blank" rel="noopener">Live Demo <span class="arrow">&rarr;</span></a>
                     </div>
                 </div>
-            </div>
-            
-            <div id="about" class="row section-heading">
-                <div class="col-sm-12">About Me</div> 
-            </div>
-
-            <div class="row flex-row align-center section-spacing">
-                <div class="col-sm-4 text-center">
-                    <img src="images/gambar_utama.jpg" class="about-image">
+            </article>
+            <article class="card project-card reveal d1">
+                <div class="project-thumb" style="display:grid;place-items:center;background:radial-gradient(circle at 50% 35%, rgba(139,92,246,0.28), transparent 70%);">
+                    <span style="font-size:52px;line-height:1;">&#128739;</span>
                 </div>
-                <div class="col-sm-8">
-                    <div class="card about-card">
-                        <p>Driven tech professional with a deep passion for cybersecurity. I thrive on mastering new technologies, solving complex challenges, and building secure, efficient solutions. As a lifelong learner and active collaborator, I am always eager to share knowledge and partner on innovative tech projects. Feel free to reach out for networking or new opportunities.</p>
+                <div class="project-body">
+                    <div class="tags">
+                        <span class="tag a">LangGraph</span><span class="tag b">PostgreSQL</span><span class="tag b">DuckDB</span>
+                    </div>
+                    <h3>GridGuard</h3>
+                    <p class="desc">An AI-assisted traffic-incident system from UMHackathon 2026 — stateful LangGraph reasoning drives budget checks, fund transfer and contractor dispatch, with full auditability in PostgreSQL.</p>
+                    <div class="project-links">
+                        <span class="tag">UMHackathon 2026</span>
                     </div>
                 </div>
+            </article>
+        </div>
+        <div style="text-align:center; margin-top:34px;" class="reveal">
+            <a href="projects.html" class="btn btn-primary">See all projects <span class="arrow">&rarr;</span></a>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="section container">
+        <div class="cta reveal">
+            <h2>Let's build something <span class="grad-text">together</span></h2>
+            <p>Open to internships, collaborations and interesting backend problems. The fastest way to reach me is email.</p>
+            <div class="contact-methods">
+                <a href="mailto:muhammad_26005849@utp.edu.my"><img src="images/gmail.png" alt="">muhammad_26005849@utp.edu.my</a>
+                <a href="https://www.linkedin.com/in/akmal-fikri-331a36275/" target="_blank" rel="noopener"><img src="images/linkedin.png" alt="">LinkedIn</a>
+                <a href="https://github.com/akriii" target="_blank" rel="noopener"><img src="images/github(2).png" alt="">GitHub</a>
             </div>
+        </div>
+    </section>
 
-            <div id="achievement" class="row section-heading">
-                <div class="col-sm-12">Achievement</div> 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span data-year>2026</span> Akmal Fikri. Designed &amp; built with HTML, CSS &amp; JS.</p>
+            <div class="socials">
+                <a href="https://github.com/akriii" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github(2).png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/akmal-fikri-331a36275/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="mailto:muhammad_26005849@utp.edu.my" aria-label="Email"><img src="images/gmail.png" alt="Email"></a>
             </div>
+        </div>
+    </footer>
 
-            <div class="row flex-row section-spacing">
-                
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card">
-                        <h3 class="card-title">Education</h3>
-                        <img src="images/achievement2.png" class="card-icon">
-                        
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">Bachelor of Computer Science (Hons.)</p>
-                            <hr class="inner-hr">
-                            <p>Universiti Teknologi PETRONAS (UTP)</p>
-                            <p>(May 2026 - Present)</p>
-                        </div>
-
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">Diploma in Computer Science</p>
-                            <hr class="inner-hr">
-                            <p>Universiti Teknologi MARA Perak Branch Tapah Campus</p>
-                            <p>(October 2023 - February 2026)</p>
-                            <div class="highlight-box">
-                                <p class="cgpa-text">CGPA: 3.78/4.00</p>
-                                <p class="dean-text">Vice Chancellor Award</p>
-                                <p class="dean-text">(5 times dean's list)</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card">
-                        <h3 class="card-title">Experience</h3>
-                        <img src="images/experience.png" class="card-icon">
-                        
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">Web Developer (Internship)</p>
-                            <hr class="inner-hr">
-                            <p>Universiti Teknologi PETRONAS (UTP)</p>
-                            <p>(September 2025 - February 2026)</p>
-                            <p class="inner-details">Develop a backend solutions for CEE department, manage alumni databases, and integrating systems to improve organizational workflow.</p>
-                        </div>
-                         <!--
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">[Next Job Title]</p>
-                            <hr class="inner-hr">
-                            <p>[Company Name]</p>
-                            <p>([Month, Year] - Present)</p>
-                            <p class="inner-details">Brief details about your daily tasks and technical achievements.</p>
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card">
-                        <h3 class="card-title">Activity</h3>
-                        <img src="images/activity.png" class="card-icon">
-                         
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">UMHackathon 2026</p>
-                            <hr class="inner-hr">
-                            <p class="inner-details">Participated as a Lead Documentation and Second Lead Back-End Dev hackathon at Universiti Malaya.</p>
-                            <p>(April 2026)</p>
-                            <a href="files/umhackathon2026_cert.pdf" class="mt-auto">
-                                <button class="btn button-custom w-100">Click This for Certification</button>
-                            </a>
-                        </div>
-
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">Devcon 2K24: Hackblast</p>
-                            <hr class="inner-hr">
-                            <p class="inner-details">Built a working prototype using Visual Basic and Microsoft Access within 48 hours as part of a team of 4.</p>
-                            <p>(December 2024)</p>
-                            <a href="files/devcon_cert.pdf" class="mt-auto">
-                                <button class="btn button-custom w-100">Click This for Certification</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="row flex-row section-spacing justify-center">
-                <div class="col-sm-8 d-flex">
-                    <div class="card full-card">
-                        <h3 class="card-title">Certifications</h3>
-                        <div class="inner-card">
-                            <p class="card-subtitle-small">Introduction to TensorFlow</p>
-                            <hr class="inner-hr">
-                            <p>Deeplearning.AI</p>
-                            <p>June 2026</p>
-                            <a href="#" class="mt-auto">
-                                <button class="btn button-custom w-100">View Certificate</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="skills" class="row section-heading">
-                <div class="col-sm-12">My Skills</div> 
-            </div>
-
-            <div class="row flex-row section-spacing">
-                <div class="col-sm-3 d-flex">
-                    <div class="card full-card text-left">
-                        <h3 class="card-title">Language</h3>
-                        <hr>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Java</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 60%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>HTML/CSS</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>PHP</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 80%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>JavaScript</span> <span class="text-basic">Basic</span></div>
-                            <div class="progress-bg"><div class="progress-fill basic" style="width: 30%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Python</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 60%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 d-flex">
-                    <div class="card full-card text-left">
-                        <h3 class="card-title">Database</h3>
-                        <hr>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>MySQL XAMPP</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Apex Oracle</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 50%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Supabase PostgreSQL</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 85%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 d-flex">
-                    <div class="card full-card text-left">
-                        <h3 class="card-title">Framework</h3>
-                        <hr>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Spring Boot</span> <span class="text-basic">Basic</span></div>
-                            <div class="progress-bg"><div class="progress-fill basic" style="width: 20%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>React</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 50%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Fast API</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 50%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-3 d-flex">
-                    <div class="card full-card text-left">
-                        <h3 class="card-title">Knowledge</h3>
-                        <hr>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Web Development</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Mobile App Dev</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 45%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Rest API</span> <span class="text-intermediate">Intermediate</span></div>
-                            <div class="progress-bg"><div class="progress-fill intermediate" style="width: 45%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>TensorFlow</span> <span class="text-basic">Basic</span></div>
-                            <div class="progress-bg"><div class="progress-fill basic" style="width: 20%;"></div></div>
-                        </div>
-                        <div class="skill-row">
-                            <div class="skill-label"><span>Poster/Graphic Design (Canva)</span> <span class="text-experienced">Experienced</span></div>
-                            <div class="progress-bg"><div class="progress-fill experienced" style="width: 80%;"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="project" class="row section-heading">
-                <div class="col-sm-12">My Projects</div> 
-            </div>
-
-            <div class="row flex-row section-spacing">
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card project-card">
-                        <h3 class="card-title">CEE Study Plan</h3>
-                        <hr>
-                        <img src="images/study_plan.png" class="project-img">
-                        <div class="tech-tags">
-                            <span class="tag tag-green">React</span>
-                           <span class="tag tag-green">FastAPI</span>
-                            <span class="tag tag-purple">Supabase</span>
-                            <span class="tag tag-purple">Web Development</span>
-                        </div>
-                        <p class="project-desc">A full-stack academic planning tool used by 100+ CEE students to monitor course completion and GPA progression in real time while integrated HuggingFace API to provide AI feedback on student performance.</p>
-                        <a href="https://study-plan-react.vercel.app/"><button class="btn button-custom mt-auto">CEE Study Plan</button></a>
-                    </div>
-                </div>
-
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card project-card">
-                        <h3 class="card-title">UTP VCR</h3>
-                        <hr>
-                        <img src="images/utp_vcr_img.png" class="project-img">
-                        <div class="tech-tags">
-                            <span class="tag tag-purple">PHP</span>
-                            <span class="tag tag-purple">HTML/CSS</span>
-                            <span class="tag tag-green">Web Development</span>
-                            <span class="tag tag-purple">MySQL XAMPP</span>
-                        </div>
-                        <p class="project-desc">A centralized vendor code requisition portal that cut manual verification workload by 60% by digitizing a previously email-based approval process.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 d-flex">
-                    <div class="card full-card project-card">
-                        <h3 class="card-title">Task And Project Management System</h3>
-                        <hr>
-                        <img src="images/tasksystem_screenshot.png" class="project-img">
-                        <div class="tech-tags">
-                            <span class="tag tag-purple">HTML/CSS</span>
-                            <span class="tag tag-purple">PHP</span>
-                            <span class="tag tag-green">Web Development</span>
-                            <span class="tag tag-purple">MySQL XAMPP</span>
-                        </div>
-                        <p class="project-desc">A web-based Task and Project Management System designed to help organizations assign, track, and manage employee tasks efficiently. <a href="https://akri.kesug.com/" class="project-link"><strong>Redirect to website</strong></a></p>
-                        <a href="https://github.com/akriii/TaskAndProjectManagementSystem"><button class="btn button-custom mt-auto">Github Repo</button></a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact" class="row section-heading">
-                <div class="col-sm-12">Contact Me</div> 
-            </div>
-            
-            <div class="row flex-row section-spacing">
-                <div class="col-sm-12 d-flex justify-center">
-                    <div class="contact-box">
-                        <img src="images/gmail.png" alt="Email">
-                        <span>mrakri15@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-text">
-                <p>&copy; 2025 Akmal Fikri. All rights reserved.</p>
-            </div>
-
-        </div> </div> 
-        <script>
-        // 1. Smooth Scrolling for Sidebar Links (Your existing code)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // 2. Scroll Reveal Animation Logic
-        document.addEventListener("DOMContentLoaded", function() {
-            // Target the elements you want to animate (cards, headings, contact box)
-            const elementsToReveal = document.querySelectorAll('.card, .section-heading, .contact-box');
-
-            // Apply the initial hidden state class to all targeted elements
-            elementsToReveal.forEach(el => {
-                el.classList.add('reveal-on-scroll');
-            });
-
-            // Set up the Intersection Observer
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        // Fade in when the element scrolls into view
-                        entry.target.classList.add('is-visible');
-                    } else {
-                        // Fade back out when the element leaves the viewport (scrolling up or down)
-                        entry.target.classList.remove('is-visible');
-                    }
-                });
-            }, {
-                threshold: 0.2 // Triggers the animation when 15% of the element is visible
-            });
-
-            // Tell the observer to watch each element
-            elementsToReveal.forEach(el => {
-                observer.observe(el);
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
+</html>

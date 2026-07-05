@@ -358,6 +358,7 @@ p { margin: 0 0 1rem; }
     background:
         radial-gradient(500px 220px at 50% 0%, var(--accent-soft), transparent 70%),
         var(--bg-elev);
+        
     border: 1px solid var(--border);
 }
 .cta h2 { font-size: clamp(26px, 4vw, 38px); margin-bottom: 12px; }

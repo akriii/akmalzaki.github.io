@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects — Akmal Zaki</title>
+    <meta name="description" content="Projects built by Akmal Zaki — full-stack and backend applications.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">AZ</span>
+                <span class="brand-name">Akmal Zaki<span>.dev</span></span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="skills.html">Skills</a>
+                <a href="resume.html">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page">
+        <section class="container">
+            <div class="section-head reveal">
+                <span class="kicker">Portfolio</span>
+                <h1 class="section-title">My <span class="grad-text">Projects</span></h1>
+                <p class="section-sub">Full-stack and backend applications I've designed, built and shipped — from university systems to hackathon builds.</p>
+            </div>
+
+            <div class="grid grid-3">
+
+                <article class="card project-card reveal">
+                    <div class="project-thumb"><img src="images/study_plan.png" alt="CEE Study Plan interface"></div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag a">FastAPI</span>
+                            <span class="tag a">React</span>
+                            <span class="tag b">Supabase</span>
+                            <span class="tag b">Render</span>
+                            <span class="tag b">Vercel</span>
+                        </div>
+                        <h3>CEE Study Plan</h3>
+                        <p class="desc">A full-stack academic planning tool used by 100+ CEE students to monitor course completion and GPA progression in real time. Architected as a clean 3-layer REST API (FastAPI, deployed on Render &amp; Vercel) consumed by a dynamic React frontend, with an integrated HuggingFace API that provides AI feedback on student performance.</p>
+                        <div class="project-links">
+                            <a href="https://study-plan-react.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener">Live Demo <span class="arrow">&rarr;</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card reveal d1">
+                    <div class="project-thumb"><img src="images/utp_vcr_img.png" alt="UTP VCR portal"></div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag a">PHP</span>
+                            <span class="tag a">HTML/CSS</span>
+                            <span class="tag b">MySQL</span>
+                        </div>
+                        <h3>UTP VCR</h3>
+                        <p class="desc">A centralized vendor code requisition portal that cut manual verification workload by 60% by digitizing a previously email-based approval process — built with a 3-stage verification workflow and role separation across standard users and 3 admin tiers to keep thousands of confidential documents secure.</p>
+                        
+                        <div class="project-links">
+                            <span class="tag">Internal system</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card reveal d2">
+                    <div class="project-thumb" style="display:grid;place-items:center;background:radial-gradient(circle at 50% 35%, rgba(139,92,246,0.28), transparent 70%);">
+                        <span style="font-size:52px;line-height:1;">&#128739;</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag a">LangGraph</span>
+                            <span class="tag b">PostgreSQL</span>
+                            <span class="tag b">DuckDB</span>
+                        </div>
+                        <h3>GridGuard</h3>
+                        <p class="desc">An AI-assisted traffic-incident system built for UMHackathon 2026 (Back-End Dev &amp; Documentation). Stateful cyclic reasoning with LangGraph loops drives tool-based decisions for budget checks, fund transfer and contractor dispatch — with end-to-end auditability in PostgreSQL and operational budgeting in DuckDB for municipal projects worth millions of Ringgit.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/syahrillhaiqal/umhackathon" class="btn btn-ghost" target="_blank" rel="noopener">GitHub Repo <span class="arrow">&rarr;</span></a>
+                        </div>
+                        <!--<div class="project-links">
+                            <span class="tag">UMHackathon 2026</span>
+                        </div>-->
+                    </div>
+                </article>
+
+                <article class="card project-card reveal d2">
+                    <div class="project-thumb"><img src="images/tasksystem_screenshot.png" alt="Task and Project Management System"></div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag a">PHP</span>
+                            <span class="tag a">HTML/CSS</span>
+                            <span class="tag b">MySQL</span>
+                        </div>
+                        <h3>Task &amp; Project Management System</h3>
+                        <p class="desc">A web-based Task and Project Management System designed to help organizations assign, track and manage employee tasks efficiently. <a href="https://akri.kesug.com/" class="link-inline" target="_blank" rel="noopener">Redirect to website</a></p>
+                        <div class="project-links">
+                            <a href="https://github.com/akriii/TaskAndProjectManagementSystem" class="btn btn-ghost" target="_blank" rel="noopener">GitHub Repo<span class="arrow">&rarr;</span></a>
+                            <!-- <a href="https://akri.kesug.com/" class="btn btn-primary" target="_blank" rel="noopener">Live Site <span class="arrow">&rarr;</span></a> -->
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card project-card reveal">
+                    <div class="project-thumb"><img src="images/Alert Subscription Apps - Interface.png" alt="Alert Subscription App"></div>
+                    <div class="project-body">
+                        <div class="tags">
+                            <span class="tag a">Python</span>
+                            <span class="tag b">Notifications</span>
+                        </div>
+                        <h3>Alert Subscription App</h3>
+                        <p class="desc">A subscription-based alerting interface that lets users opt in to notifications and receive timely updates through a clean, focused UI.</p>
+                        <div class="project-links">
+                            <span class="tag">Personal build</span>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+
+            <div class="cta reveal" style="margin-top:48px;">
+                <h2>Want to see more?</h2>
+                <p>My GitHub has the full picture — repos, experiments and works in progress.</p>
+                <div class="contact-methods">
+                    <a href="https://github.com/akriii" target="_blank" rel="noopener"><img src="images/github(2).png" alt="">Visit my GitHub</a>
+                    <a href="mailto:muhammad_26005849@utp.edu.my"><img src="images/gmail.png" alt="">Get in touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span data-year>2026</span> Akmal Fikri.</p>
+            <div class="socials">
+                <a href="https://github.com/akriii" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/github(2).png" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/akmal-fikri-331a36275/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="mailto:muhammad_26005849@utp.edu.my" aria-label="Email"><img src="images/gmail.png" alt="Email"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

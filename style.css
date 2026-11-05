@@ -219,6 +219,8 @@ p { margin: 0 0 1rem; }
 .hero { padding-top: calc(var(--nav-h) + 40px); }
 .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
 
+.hero-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+
 .badge {
     display: inline-flex; align-items: center; gap: 8px;
     font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.5px;
@@ -227,6 +229,17 @@ p { margin: 0 0 1rem; }
     background: var(--accent-soft); border: 1px solid var(--accent-border);
 }
 .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 10px #4ade80; }
+
+.badge-counter {
+    padding: 4px 10px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+}
+.badge-counter img {
+    display: block;
+    height: 20px;
+    border-radius: 3px;
+}
 
 .hero h1 {
     font-size: clamp(44px, 7vw, 82px); letter-spacing: -2px; margin: 22px 0 6px;
@@ -377,6 +390,16 @@ p { margin: 0 0 1rem; }
     border-top: 1px solid var(--border-soft); margin-top: 60px; padding: 32px 0;
 }
 .footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-left { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.footer-counter { display: inline-flex; align-items: center; }
+.badge-counter-dev {
+    display: inline-flex; align-items: center; font-family: var(--font-mono);
+    font-size: 11px; font-weight: 500; border-radius: 4px; overflow: hidden;
+    height: 20px; line-height: 20px; border: 1px solid var(--border); user-select: none;
+}
+.badge-counter-dev .lbl { background: #17171c; color: #fff; padding: 0 7px; }
+.badge-counter-dev .val { background: #8b5cf6; color: #fff; padding: 0 7px; }
+.footer-counter img { display: block; height: 20px; border-radius: 4px; }
 .footer p { margin: 0; color: var(--text-muted); font-size: 13.5px; }
 .footer .socials { display: flex; gap: 10px; }
 .footer .socials a {
@@ -432,4 +455,5 @@ p { margin: 0 0 1rem; }
     .brand-name { display: none; }
     .resume-head { flex-direction: column; }
     .footer .container { flex-direction: column; text-align: center; }
+    .footer-left { justify-content: center; }
 }

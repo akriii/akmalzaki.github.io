@@ -1,0 +1,26 @@
+# Disable directory browsing
+Options -Indexes
+
+# Block access to hidden files and directories (such as .git, .gitignore, .env)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule "(^|/)\.(?!well-known)" - [F]
+</IfModule>
+
+# Block access to sensitive documentation or configuration files
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|orig|psd|sh|sql|sw[op]|env|md))$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# Security Headers (if headers module is active in Apache)
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

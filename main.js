@@ -52,4 +52,46 @@
             card.style.setProperty("--my", (e.clientY - r.top) + "px");
         });
     });
+
+    /* --- Visitor counter: ignore developer & localhost --- */
+    var counterBox = document.querySelector(".footer-counter");
+    if (counterBox) {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("dev") === "1" || params.get("admin") === "1") {
+            try { localStorage.setItem("akmal_dev_mode", "1"); } catch (e) {}
+            if (window.history && window.history.replaceState) {
+                var cleanUrl = window.location.pathname + window.location.hash;
+                window.history.replaceState(null, "", cleanUrl);
+            }
+        } else if (params.get("dev") === "0") {
+            try { localStorage.removeItem("akmal_dev_mode"); } catch (e) {}
+        }
+
+        var isLocal = location.hostname === "localhost" ||
+                      location.hostname === "127.0.0.1" ||
+                      location.hostname.endsWith(".test") ||
+                      location.protocol === "file:";
+
+        var isDev = false;
+        try {
+            isDev = isLocal || localStorage.getItem("akmal_dev_mode") === "1";
+        } catch (e) {}
+
+        if (isDev) {
+            // Render local dev badge without calling hits.sh (prevents inflating view count)
+            var devBadge = document.createElement("span");
+            devBadge.className = "badge-counter-dev";
+            devBadge.title = "Developer Mode Active: visits from this browser are not counted";
+            devBadge.innerHTML = '<span class="lbl">Visitors</span><span class="val">Dev Mode</span>';
+            counterBox.appendChild(devBadge);
+        } else {
+            // Real visitor: load hits.sh SVG to record and display visit
+            var img = document.createElement("img");
+            img.src = "https://hits.sh/akriii.github.io.svg?label=Visitors&color=8b5cf6&labelColor=17171c";
+            img.alt = "Visitors";
+            img.width = 70;
+            img.height = 20;
+            counterBox.appendChild(img);
+        }
+    }
 })();

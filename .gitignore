@@ -1,0 +1,23 @@
+# Environment and credentials
+.env
+.env.*
+*.env
+*.local
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Local Server & Temp Files
+*.log
+*.tmp
+*.bak
+*.swp
+*~
